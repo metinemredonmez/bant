@@ -1,0 +1,88 @@
+{
+  "sources": ["prompts/sistem_prompt.md", "CODEX_PROMPT.md"],
+  "breath": {
+    "maximum_hold_seconds": 4,
+    "fast_excluded_subcategories": ["Kaygı", "Uyku", "Akşam"],
+    "timing_tolerance_seconds": 0.5
+  },
+  "sleep": {"min_words_per_minute": 110, "max_words_per_minute": 130, "ending_seconds": 180},
+  "publish": {"max_title_characters": 60, "max_description_sentences": 2, "tags": 10, "min_checklist": 3, "max_checklist": 5},
+  "pose": {"min_alignment": 2, "max_alignment": 3},
+  "audio_duration_tolerance": 0.1,
+  "video": {
+    "min_seconds": 5,
+    "max_seconds": 8,
+    "palette": "Light blue, white and sand color palette, soft daylight.",
+    "negative_prompt": "No close-ups of hands, feet or fingers. No fast movements, mirrors, on-screen text, logos or brands.",
+    "prohibited": {
+      "close_up": "(?:close[ -]?ups?|tight (?:shot|fram(?:e|ing))|macro (?:shot|view))[^.!?]{0,45}\\b(?:hands?|feet|foot|fingers?|toes?)\\b|\\b(?:hands?|feet|foot|fingers?|toes?)\\b[^.!?]{0,35}(?:close[ -]?ups?|tight shot|macro shot)",
+      "mirror": "\\b(?:mirrors?|mirrored walls?)\\b",
+      "on_screen_text": "\\b(?:on[ -](?:screen|video) (?:text|letters|words|captions)|(?:text|title|caption|subtitle|word) (?:overlays?|cards?|on (?:the )?screen)|(?:text|captions?|subtitles?|words?) (?:appears?|displayed)|(?:show|display|add) (?:the )?(?:text|captions?|subtitles?|title)|logos?)\\b",
+      "fast_motion": "\\b(?:(?:fast|rapid|quick|sudden|abrupt|speedy)[ -]+(?:camera|movements?|motion|cuts?|pan(?:s|ning)?|zoom(?:s|ing)?|action|transitions?|body|whip)|whip[ -]?pans?|(?:moves?|pans?|zooms?|cuts?) (?:rapidly|quickly|fast|abruptly))\\b"
+    }
+  },
+  "languages": {
+    "tr": {
+      "pause": "duraklama ([1-9][0-9]*) sn",
+      "abbreviations": ["ör", "örn", "vs", "vb", "bkz", "dk", "sn", "sant", "kg", "dr", "prof", "doç", "örn"],
+      "medical_claims": [
+        "tedavi\\s+(?:et(?:ti|me|miş|miyor|mektedir|mez)\\w*|ed\\w*)",
+        "iyileştir\\w*",
+        "(?:geçir(?:ir|di|ecek|ebilir|mek|miş|iyor|sin|ecek|en)\\w*|geçirmiştir)",
+        "zayıflat\\w*",
+        "kilo\\s+verdir\\w*",
+        "(?:ağrı(?:yı)?|acıyı|rahatsızlığı|hastalığı|belirtileri)\\s+(?:kes\\w*|gider\\w*|yok\\s+e[td]\\w*|ortadan\\s+kaldır\\w*)"
+      ],
+      "stage_directions": ["ses efekti", "gülme sesi", "kahkaha sesi", "fısıltıyla söyle", "fısıldayarak oku", "fısıldayarak söyle", "efekt:", "fısıltı:", "kahkaha:", "gülme:"],
+      "introduction": "(?:merhaba|selam)[,!]?\\s*(?:ben|adım)\\s+{name}(?=\\W|$)",
+      "safety": {
+        "pregnancy": "hamile|gebeli|gebelik|gebe",
+        "recent_surgery": "(?:yakın zamanda|kısa süre önce|yeni)\\b[^.!?]{0,65}\\b(?:ameliyat|operasyon|cerrahi)",
+        "lower_back": "\\bbel(?:in|inde|inde\\w*|le)?\\b",
+        "neck": "\\bboy(?:un|n\\w*)\\b",
+        "knee": "\\bdiz\\w*\\b",
+        "doctor": "\\b(?:doktor|hek[ıi]m)\\w*[^.!?]{0,65}\\b(?:danış|görüş|sor)\\w*",
+        "pain_stop": "\\bağrı\\w*[^.!?]{0,65}\\b(?:dur|bırak|ara ver)\\w*"
+      },
+      "dizziness": "(?:baş(?:ın|ınız)?\\s+dön\\w*|serseml\\w*)[^.!?]{0,80}\\b(?:dur|bırak|dön|ver)\\w*",
+      "fast_breath": "kapalabhati|kapalabati|bhastrika|ateş nefesi|hızlı(?:ca)?(?:\\s+hızlı)?\\s+(?:nefes|nefeslen|al\\s+ve\\s+ver)|nefes(?:ini|i)?\\s+(?:hızlı(?:ca)?\\s+(?:al|ver)|hızlandır)",
+      "hold_instruction": "nefes\\w*[^.!?]{0,60}\\btut(?:un|arak|uyoruz|acağız|acağız|mayı|ma(?:k)?|uyor|alım)?\\b|\\btut(?:un|alım)?\\b[^.!?]{0,30}\\bnefes\\w*",
+      "negative_hold": "tutma(?:yın|dan|mıyoruz|muyoruz|mak|malısın)?\\b|tutmayacağız|tutmayalım|tutmak yok|tutmadan|tutmana gerek yok|tutman gerekmiyor",
+      "duration_words": {"bir": 1, "iki": 2, "üç": 3, "dört": 4, "beş": 5, "altı": 6, "yedi": 7, "sekiz": 8, "dokuz": 9, "on": 10, "yirmi": 20, "otuz": 30, "kırk": 40, "elli": 50, "altmış": 60, "yetmiş": 70, "seksen": 80, "doksan": 90, "yüz": 100, "bin": 1000, "yarım": 0.5, "buçuk": 0.5},
+      "seconds": "saniye(?:lik|de|yi)?|sn",
+      "minutes": "dakika(?:lık|da|yı)?|dk",
+      "beginner_poses": "baş duruşu|baş üstü duruş|derin geriye eğilme|derin geriye bükülme|tam lotus|sirsasana|shirshasana|padmasana|urdhva dhanurasana"
+    },
+    "en": {
+      "pause": "pause ([1-9][0-9]*) s",
+      "abbreviations": ["etc", "approx", "min", "sec", "secs", "hr", "dr", "vs", "e.g", "i.e", "lb", "lbs", "kg"],
+      "medical_claims": [
+        "cure(?:s|d)?|curing",
+        "heal(?:s|ed|ing)?",
+        "treat(?:s|ed|ing)?(?!\\s+(?:yourself|your body|your mind|this|it|the breath))",
+        "remed(?:y|ies|ied)",
+        "(?:reliev(?:e|es|ed|ing)|eliminat(?:e|es|ed|ing)|revers(?:e|es|ed|ing))\\s+(?:your\\s+)?(?:pain|anxiety|illness|disease|asthma|symptoms)",
+        "(?:lose|shed|burn)(?:s|ing)?\\s+(?:extra\\s+)?(?:body\\s+)?(?:weight|fat)|weight\\s+loss|slimming|slims"
+      ],
+      "stage_directions": ["sound effect", "whisper to the microphone", "speak in a whisper", "whisper:", "laugh:", "laughs:", "giggles:", "fade in:", "sound cue:"],
+      "introduction": "(?:hi|hello|hey)[,!]?\\s*(?:i['’]m|i am|my name is)\\s+{name}(?=\\W|$)",
+      "safety": {
+        "pregnancy": "pregnan\\w*",
+        "recent_surgery": "(?:recent\\w*|just)\\b[^.!?]{0,60}\\b(?:surgery|operation)|(?:surgery|operation)\\b[^.!?]{0,45}\\brecent\\w*",
+        "lower_back": "lower[ -]back|low[ -]back|\\bback\\s+(?:pain|issue|condition|injur|problem)",
+        "neck": "\\bneck\\b",
+        "knee": "\\bknees?\\b",
+        "doctor": "\\b(?:ask|consult|speak (?:to|with)|talk (?:to|with)|check (?:in )?with)\\b[^.!?]{0,70}\\b(?:doctor|physician|healthcare (?:provider|professional))\\b",
+        "pain_stop": "\\bpain\\b[^.!?]{0,65}\\bstop\\b|\\bstop\\b[^.!?]{0,65}\\bpain\\b"
+      },
+      "dizziness": "(?:dizz\\w*|light[ -]?headed\\w*)[^.!?]{0,80}\\b(?:stop|return|pause)\\b|\\b(?:stop|return|pause)\\b[^.!?]{0,80}(?:dizz\\w*|light[ -]?headed\\w*)",
+      "fast_breath": "kapalabhati|kapalabati|bhastrika|breath of fire|(?:fast|rapid|quick)\\s+(?:breath(?:s|ing)?|inhale|exhale)|breath(?:e|ing)\\s+(?:rapidly|quickly|fast)",
+      "hold_instruction": "\\bhold(?:ing)?\\b[^.!?]{0,45}\\b(?:your |the )?breath\\b|\\b(?:your |the )?breath\\b[^.!?]{0,50}\\bhold\\b|(?:^|[.!?]\\s+)hold\\b",
+      "negative_hold": "(?:do not|don['’]t|never|no|without)\\s+hold(?:ing)?|no need to hold|avoid holding|skip the hold",
+      "duration_words": {"zero": 0, "one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7, "eight": 8, "nine": 9, "ten": 10, "eleven": 11, "twelve": 12, "thirteen": 13, "fourteen": 14, "fifteen": 15, "sixteen": 16, "seventeen": 17, "eighteen": 18, "nineteen": 19, "twenty": 20, "thirty": 30, "forty": 40, "fifty": 50, "sixty": 60, "seventy": 70, "eighty": 80, "ninety": 90, "hundred": 100, "thousand": 1000, "half": 0.5},
+      "seconds": "seconds?|secs?",
+      "minutes": "minutes?|mins?",
+      "beginner_poses": "headstand|head stand|deep back[ -]?bend|full lotus|sirsasana|shirshasana|padmasana|urdhva dhanurasana"
+    }
+  }
+}

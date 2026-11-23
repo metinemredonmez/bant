@@ -1,0 +1,22 @@
+# Yer tutucu. Üretim için koçun gerçek ses kimliğini ve avatar dosyasını ekle.
+name: Deniz
+gender: kadın
+personality: sakin
+focus: nefes
+voice_id: ""
+voice_settings:
+  stability: 0.65
+  similarity_boost: 0.75
+avatar: ""
+placeholder: true
+character:
+  age_range: 30–35
+  hair: Omuz hizasında koyu kahverengi, ensede alçak at kuyruğu
+  clothing: Açık mavi pamuklu üst ve kum rengi bol pantolon
+  setting: Gün ışığı alan sade, açık renkli bir stüdyo
+  light: Sol pencereden gelen yumuşak gün ışığı
+character_description: >-
+  A woman in her early thirties with shoulder-length dark brown hair tied in a low ponytail,
+  wearing a light blue long-sleeve cotton top and loose sand-colored trousers, in a bright,
+  minimalist studio with pale oak flooring, white walls and a potted plant, soft daylight
+  from the large window on the left.

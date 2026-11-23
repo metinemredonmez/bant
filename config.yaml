@@ -1,0 +1,10 @@
+default_coach: deniz
+routes:
+  seri: gemini
+  plan: gemini
+  anlatim_tr: gemini
+  anlatim_en: gemini
+  podcast_tr: gemini
+  podcast_en: gemini
+  metadata: kaptan
+  cekimler: gemini

@@ -1,0 +1,16 @@
+# Bir bölüm ya da seri için girdi. Boş bırakılan alanı üretici kendi seçer ve en başta belirtir.
+kategori: Nefes            # Yoga / Pilates / Meditasyon / Nefes / Uyku hikâyesi / Ses manzarası / Podcast
+alt_kategori: Sakinleş
+seviye: Başlangıç          # Başlangıç / Orta / İleri
+sure_dk: 3
+konu: "yoğun günün ortasında kısa mola"
+bicim: "Video + anlatım"   # Video + anlatım / Yalnız ses / Podcast / Hepsi
+bolum_sayisi: 1
+
+koc:
+  ad: Deniz                # yer tutucu; gerçek koçla değiştir
+  cinsiyet: kadın
+  kisilik: sakin           # sakin / enerjik / destekleyici / motive edici
+  odak: nefes              # genel / meditasyon / uyku / nefes / yoga / pilates
+  elevenlabs_ses_kimligi: ""
+  avatar: ""               # avatar görselinin yolu ya da kısa tarifi
